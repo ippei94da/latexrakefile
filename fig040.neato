@@ -1,0 +1,7 @@
+// vim: syntax=dot
+digraph sample {
+  //graph [bgcolor = "#99FFCC"];
+  alpha -> beta;
+  alpha -> gamma;
+  beta -> gamma;
+}

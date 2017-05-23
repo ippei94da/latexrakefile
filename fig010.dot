@@ -1,0 +1,37 @@
+digraph sample {
+  //graph [bgcolor = "#99FFCC"];
+  "*.tex" -> "*.dvi";
+  "*.tex(child)" -> "*.dvi";
+  //"*.tex" -> dvi;
+  "*.bib" -> "*.dvi";
+  "*.dvi" -> "*.pdf";
+  "*.svg" -> "*.eps";
+  "*.svg" -> "*.png"[color = red];
+  "*.pov" -> "*.png";
+  "*.png" -> "*.eps";
+  "*.eps" -> "*.dvi";
+  "*.eps" -> "*.png"[color = red];
+  "*.rb"  -> "*.dvi";
+  "*.rb"  -> "*.png"[color = red];
+  "*.rb"  -> "*.eps";
+  "*.dat" -> "*.png"[color = red];
+  "*.dat" -> "*.eps";
+  "*.plt" -> "*.png"[color = red];
+  "*.plt" -> "*.eps";
+
+  //"*.rb\n(+ *.dat)" -> "*.eps";
+  //"rb" -> eps[label = "(+dat)"];
+  //"dat" -> eps;
+  //"dat" -> eps;
+
+  "*.dot" -> "*.eps"[label = "dot\ncirco\nfdp\nneato\ntwopi"];
+  "*.dot" -> "*.png"[label = "dot\ncirco\nfdp\nneato\ntwopi"][color = red];
+
+  //"dot\ncirco\nfdp\nneato\ntwopi" -> eps;
+  //dot -> eps;
+  //circo -> eps;
+  //fdp -> eps;
+  //neato -> eps;
+  //twopi -> eps;
+
+}

@@ -1,0 +1,9 @@
+*.png
+*.eps
+*.pdf
+main.aux
+main.dvi
+main.fdb_latexmk
+main.fls
+main.log
+main.toc

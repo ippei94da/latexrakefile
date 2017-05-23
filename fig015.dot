@@ -1,0 +1,30 @@
+digraph sample {
+  //graph [bgcolor = "#99FFCC"];
+  "main.tex" -> "main.dvi"[label = "latex main.tex"];
+  "*.tex(child)" -> "main.dvi";
+  "my.bib" -> "main.dvi";
+  "main.dvi" -> "(dirname).pdf";
+  "fig*.eps" -> "main.dvi";
+  //"fig*.eps" -> "fig*.png";
+  "list*.rb" -> "main.dvi";
+
+  //"dot" -> eps[label = "dot\ncirco\nfdp\nneato\ntwopi"];
+  //"dot\ncirco\nfdp\nneato\ntwopi" -> eps;
+  "fig*.svg"   -> "fig*.eps";
+  "fig*.pov"   -> "fig*.eps"[label = "(delete png)"];
+  "fig*.rb\n(+fig*.dat)"    -> "fig*.eps";
+  "fig*.dot"   -> "fig*.eps";
+  "fig*.circo" -> "fig*.eps";
+  "fig*.fdp"   -> "fig*.eps";
+  "fig*.neato" -> "fig*.eps";
+  "fig*.twopi" -> "fig*.eps";
+
+  "fig*.svg"   -> "fig*.png"[color = red];
+  "fig*.pov"   -> "fig*.png"[color = red];
+  "fig*.rb\n(+fig*.dat)"    -> "fig*.png"[color = red];
+  "fig*.dot"   -> "fig*.png"[color = red];
+  "fig*.circo" -> "fig*.png"[color = red];
+  "fig*.fdp"   -> "fig*.png"[color = red];
+  "fig*.neato" -> "fig*.png"[color = red];
+  "fig*.twopi" -> "fig*.png"[color = red];
+}
